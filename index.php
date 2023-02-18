@@ -29,6 +29,7 @@ include("banco/conexao.php");
         } else {
             $menuop = 'home';
         }
+
         switch($menuop) {
             case 'home':
                 include 'paginas/home/home.php';
@@ -38,6 +39,12 @@ include("banco/conexao.php");
                 break;
             case 'contatos':
                 include 'paginas/contatos/contatos.php';
+                break;
+            case 'cad-contato':
+                include 'paginas/contatos/cad-contato.php';
+                break;
+            case 'inserir-contato':
+                include 'paginas/contatos/inserir-contato.php';
                 break;
             default:
                 include 'paginas/home/home.php';

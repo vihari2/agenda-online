@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,13 +27,11 @@
    </thead> 
 <tbody>
     <?php 
-    include ("banco/config.php");
-    include ("banco/conexao.php");
-    include ("banco/tabelas.php");
+  
+    include ("banco/contatos.php");
 
-    while ($dados = mysqli_fetch_assoc($rs)) {
-        
-    
+    $result = listaContatos();
+    while ($dados = mysqli_fetch_assoc($result)) {
     ?> 
     <tr>
         <td><?=$dados["idContato"] ?></td>
