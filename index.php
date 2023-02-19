@@ -52,6 +52,9 @@ include("banco/conexao.php");
             case 'atualizar-contato':
                 include 'paginas/contatos/atualizar-contato.php';
                 break;
+            case 'excluir-contato':
+                include 'paginas/contatos/excluir-contato.php';
+                break;
             default:
                 include 'paginas/home/home.php';
                 break;

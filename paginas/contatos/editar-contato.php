@@ -3,7 +3,7 @@
 
     include("banco/contatos.php");
 
-    $dados = mudarContato();
+    $dados = getContato();
     
 ?>
 

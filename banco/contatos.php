@@ -4,23 +4,25 @@ function listaContatos() {
 	$conn = getConexao();
 
 	$sql = "SELECT * FROM contatos";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($conn, $sql) or die("Erro ao executar consulta! " . mysqli_error($conn));
 
 	mysqli_close($conn);
 
 	return $result;
 }
 
-function listaContatosSelect(){
+function getContato(){
 	$conn = getConexao();
 	$idContato = $_GET['idContato'];
 
 	$sql = "SELECT * FROM contatos WHERE idContato= {$idContato}";
 	$result = mysqli_query($conn, $sql) or die("Erro ao recuperar dados do registro. ");
 
+	$dados = mysqli_fetch_assoc($result);
+
 	mysqli_close($conn);
 
-	return $result;
+	return $dados;
 }
 
 
@@ -41,30 +43,20 @@ function adicionaContato() {
 		    sexoContato, 
 		    dataNascContato)
 	    VALUES (
-	        '$nomeContato', 
-	        '$emailContato', 
-	        '$telefoneContato', 
-	        '$sexoContato', 
-	        '$dataNascContato'
+	        '{$nomeContato}',
+	        '{$emailContato}', 
+	        '{$telefoneContato}', 
+	        '{$sexoContato}', 
+	        '{$dataNascContato}'
 	    )";
 
-    mysqli_query($conn, $sql) or die ("Erro ao executar a consulta" .mysqli_error($conn));
+    mysqli_query($conn, $sql) or die ("Erro ao executar a consulta! " . print_r(mysqli_error($conn)));
+
+	print_r(mysqli_error($conn));
 
     mysqli_close($conn);
 
     echo "Contato inserido com sucesso!";
-}
-
-function mudarContato()
-{
-	$conn = getConexao();
-
-	$result = listaContatosSelect();
-	$dados = mysqli_fetch_assoc($result);
-
-	mysqli_close($conn);
-
-	return $dados;
 }
 
 function atualizarContato()
@@ -88,7 +80,7 @@ function atualizarContato()
 		WHERE idContato = '{$idContato}'
 	";
 
-    mysqli_query($conn, $sql) or die ("Erro ao executar a consulta" .mysqli_error($conn));
+    mysqli_query($conn, $sql) or die ("Erro ao executar a consulta" . mysqli_error($conn));
 
     mysqli_close($conn);
 
@@ -96,8 +88,19 @@ function atualizarContato()
 
 }
 
-function excluiContato()
+function excluirContato()
 {
+	$conn = getConexao();
+
+	$idContato = mysqli_real_escape_string($conn, $_GET['idContato']);
+
+	$sql = "DELETE FROM contatos WHERE idContato= '{$idContato}'";
+
+	mysqli_query($conn, $sql) or die("Erro ao excluir o registro. " . mysqli_error($conn));
+
+	mysqli_close($conn);
+
+	echo "Registro excluído com sucesso!";
 	
 }
 
