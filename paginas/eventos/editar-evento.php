@@ -1,13 +1,12 @@
 <?php 
- include ("banco/eventos.php");
+include ("banco/eventos.php");
 
 if (isset($_POST['btnAtualizar'])) {
-    atualizaEvento(); 
+    $idEvento = $_GET["idEvento"];
+    $dados = atualizaEvento($idEvento); 
 }
-
 $idEvento = $_GET["idEvento"];
 $dados = buscaEventoPorId($idEvento);
-
 ?>
 
 <!DOCTYPE html>

@@ -105,20 +105,24 @@ function atualizaEvento($idEvento)
 	
 	mysqli_query($conn, $sql) or die ("Erro ao executar a consulta" .mysqli_error($conn));
 	mysqli_close($conn);
-	echo "Evento atualizado com sucesso!";
 	return $dados;
 }
 
-function excluiEvento()
-{
-	$conn = getConexao();
-	$idEvento = mysqli_real_escape_string($conn, $_POST['idEvento']);
-	$sql = "DELETE FROM eventos WHERE idEvento = '$idEvento'";
-
-	mysqli_query($conn, $sql) or die ("Erro ao executar a consulta" .mysqli_error($conn));
-	mysqli_close($conn);
-	echo "Evento excluído com sucesso!";
-
+function excluiEvento() {
+    $conn = getConexao();
+    
+    if (isset($_GET['idEvento'])) {
+        $idEvento = mysqli_real_escape_string($conn, $_GET['idEvento']);
+        $sql = "DELETE FROM eventos WHERE idEvento = '$idEvento'";
+        mysqli_query($conn, $sql) or die ("Erro ao executar a consulta" .mysqli_error($conn));
+        mysqli_close($conn);
+        
+        echo "Evento excluído com sucesso!";
+    } else {
+        echo "ID do evento não foi informado.";
+    }
 }
+
+
 
 ?>

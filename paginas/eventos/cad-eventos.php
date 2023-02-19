@@ -12,7 +12,7 @@
     <h3 class="cadastro">Cadastro de Eventos</h3>
 </header>
 <div>
-    <form class="formcadas" action="index.php?menuop=inserir-eventos" method="post">
+    <form class="formcadas" action="index.php?menuop=inserir-evento" method="post">
         <div>
             <label for="nomeEvento">Nome do Evento</label>
             <input type="text" name="nomeEvento">

@@ -6,10 +6,11 @@
 include("banco/eventos.php");
 
 
+
 if (isset($_POST['btnAtualizar'])) {
     $idEvento = $_POST['idEvento'];
     atualizaEvento($idEvento);
-    header('Location: index.php?menuop=eventos.php&msg=Evento atualizado com sucesso!');
+    header('Location: index.php?menuop=eventos&msg=Evento atualizado com sucesso!');
     exit();
 }
 
