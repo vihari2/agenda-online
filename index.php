@@ -55,6 +55,21 @@ include("banco/conexao.php");
             case 'excluir-contato':
                 include 'paginas/contatos/excluir-contato.php';
                 break;
+            case 'cad-eventos':
+                include 'paginas/eventos/cad-eventos.php';
+                break;
+            case 'inserir-evento':
+                include 'paginas/eventos/inserir-evento.php';
+                break;
+            case 'editar-evento':
+                include 'paginas/eventos/editar-evento.php';
+                break;
+            case 'atualizar-evento':
+                include 'paginas/eventos/atualizar-evento.php';
+                break;
+            case 'excluir-evento':
+                include 'paginas/eventos/excluir-evento.php';
+                break;
             default:
                 include 'paginas/home/home.php';
                 break;
