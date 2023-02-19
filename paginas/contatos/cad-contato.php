@@ -17,19 +17,19 @@
     <form class="formcadas" action="index.php?menuop=inserir-contato" method="post">
         <div>
             <label for="nomeContato">Nome</label>
-            <input type="text" name="nomeContato">
+            <input required type="text" name="nomeContato">
         </div>
         <div>
             <label for="emailContato">E-mail</label>
-            <input type="text" name="emailContato">
+            <input required type="email" name="emailContato">
         </div>
         <div>
             <label for="telefoneContato">Telefone</label>
-            <input type="text" name="telefoneContato">
+            <input required type="text" name="telefoneContato">
         </div>
         <div>
             <label for="sexoContato">Sexo</label>
-            <input type="text" name="sexoContato">
+            <input required type="text" name="sexoContato">
         </div>
         <div>
             <label for="dataNascContato">Data de Nascimento</label>

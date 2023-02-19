@@ -31,7 +31,7 @@
         </div>
         <div>
             <label for="emailContato">E-mail</label>
-            <input type="text" name="emailContato" value="<?=$dados['emailContato']?>">
+            <input type="email" name="emailContato" value="<?=$dados['emailContato']?>">
         </div>
         <div>
             <label for="telefoneContato">Telefone</label>

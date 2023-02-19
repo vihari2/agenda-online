@@ -14,6 +14,12 @@
 <div>
     <a class="novoc" href="index.php?menuop=cad-contato">Novo Contato</a>
 </div>
+<div>
+    <form action="index.php?menuop=contatos" method="post">
+        <input type="text" name="txt_pesquisa" placeholder="O que está procurando?">
+        <input type="submit" value="Pesquisar">
+    </form>
+</div>
 <table class="table-contatos">
     <thead>
         <tr>
@@ -32,7 +38,7 @@
   
     include ("banco/contatos.php");
 
-    $result = listaContatos();
+    $result = searchContacts();
     while ($dados = mysqli_fetch_assoc($result)) {
     ?> 
     <tr>

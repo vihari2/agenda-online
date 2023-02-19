@@ -104,4 +104,36 @@ function excluirContato()
 	
 }
 
+function searchContacts() {
+	$conn = getConexao();
+
+	$txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
+
+	$sql = "SELECT  
+			idContato,
+			nomeContato,
+			emailContato,
+			CONCAT('(', SUBSTR(telefoneContato, 1, 2), ') ', SUBSTR(telefoneContato, 3, 5), '-', SUBSTR(telefoneContato, 8, 4)) AS telefoneContato,
+			CASE 
+				WHEN sexoContato='F' THEN 'FEM'
+				WHEN sexoContato='M' THEN 'MASC'
+			ELSE
+				'NÃO ESPECIFICADO'
+			END AS sexoContato,
+			DATE_FORMAT(dataNascContato, '%d/%m/%Y') AS dataNascContato
+			FROM contatos
+			WHERE idContato= '{$txt_pesquisa}' or
+			nomeContato LIKE '{$txt_pesquisa}%' or
+			emailContato LIKE '{$txt_pesquisa}%'
+			ORDER BY nomeContato ASC
+		";
+
+	$result = mysqli_query($conn, $sql) or die("Erro ao pesquisar dados do registro. ");
+
+	mysqli_close($conn);
+
+	return $result;
+
+}
+
 ?>
