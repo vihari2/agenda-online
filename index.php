@@ -46,6 +46,12 @@ include("banco/conexao.php");
             case 'inserir-contato':
                 include 'paginas/contatos/inserir-contato.php';
                 break;
+            case 'editar-contato':
+                include 'paginas/contatos/editar-contato.php';
+                break;
+            case 'atualizar-contato':
+                include 'paginas/contatos/atualizar-contato.php';
+                break;
             default:
                 include 'paginas/home/home.php';
                 break;
