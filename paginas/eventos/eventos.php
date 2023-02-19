@@ -19,15 +19,12 @@
         <tr>
             <th>ID</th>
             <th>Nome do Evento</th>
-            <th>Descrição do Evento</th>
             <th>Local do Evento</th>
             <th>Data do Evento</th>
             <th>Hora do Evento</th>
-            <th>Valor do Evento</th>
             <th>Tipo de Evento</th>
             <th>Organizador do Evento</th>
             <th>Telefone do Evento</th>
-            <th>Email do Evento</th>
             <th>Editar</th>
             <th>Excluir</th>
         </tr>
@@ -42,15 +39,13 @@
         <tr>
             <td><?=$dados["idEvento"] ?></td>
             <td><?=$dados["nomeEvento"] ?></td>
-            <td><?=$dados["descricaoEvento"] ?></td>
             <td><?=$dados["localEvento"] ?></td>
             <td><?=$dados["dataEvento"] ?></td>
             <td><?=$dados["horaEvento"] ?></td>
-            <td><?=$dados["valorEvento"] ?></td>
             <td><?=$dados["tipoEvento"] ?></td>
             <td><?=$dados["organizadorEvento"] ?></td>
             <td><?=$dados["telefoneEvento"] ?></td>
-            <td><?=$dados["emailEvento"] ?></td>
+ 
             <td><a href="index.php?menuop=editar-evento&idEvento=<?=$dados['idEvento']?>">Editar</a></td>
             <td><a href="index.php?menuop=excluir-evento&idEvento=<?=$dados['idEvento']?>">Excluir</a></td>
         </tr>

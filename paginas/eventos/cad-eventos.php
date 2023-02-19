@@ -18,10 +18,6 @@
             <input type="text" name="nomeEvento">
         </div>
         <div>
-            <label for="descricaoEvento">Descrição do Evento</label>
-            <input type="text" name="descricaoEvento">
-        </div>
-        <div>
             <label for="localEvento">Local do Evento</label>
             <input type="text" name="localEvento">
         </div>
@@ -34,10 +30,6 @@
             <input type="time" name="horaEvento">
         </div>
         <div>
-            <label for="valorEvento">Valor do Evento </label>
-            <input type="number" name="valorEvento">
-        </div>
-        <div>
             <label for="tipoEvento">Tipo de Evento</label>
             <input type="text" name="tipoEvento">
         </div>
@@ -48,10 +40,6 @@
         <div>
             <label for="telefoneEvento">Telefone do Evento</label>
             <input type="tel" name="telefoneEvento">
-        </div>
-        <div>
-            <label for="emailEvento">Email do Evento</label>
-            <input type="text" name="emailEvento">
         </div>
         <div>
             <input type="submit" value="Adicionar" name="btnAdicionar">
