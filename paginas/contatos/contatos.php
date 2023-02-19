@@ -19,10 +19,11 @@
         <input type="text" name="txt_pesquisa" placeholder="O que está procurando?">
         <input type="submit" value="Pesquisar">
     </form>
+    <br>
 </div>
-<table class="table-contatos">
+<table class='table-contatos table-striped table-bordered table-condensed table-hover' >
     <thead>
-        <tr>
+        <tr class="table-primary">
             <th>ID</th>
             <th>Nome</th>
             <th>E-mail</th>
@@ -60,7 +61,12 @@
 </html>
 <br>
 
+<?php
 
+    //totalRegistros();
+
+    
+?>
 
 
 

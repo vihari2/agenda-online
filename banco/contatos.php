@@ -105,32 +105,12 @@ function excluirContato()
 	
 }
 
-/*function totalPages() {
-	$conn = getConexao();
-
-	$pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
-
-	$quantidade = 10; //registros por página
-    $inicio = ($quantidade * $pagina) - $quantidade;
-
-	$sql = "SELECT idContato FROM contatos";
-
-	$result = mysqli_query($conn, $sql) or die("Erro ao recuperar dado do registro. ");
-	$numTotal = mysqli_num_rows($result);
-
-	mysqli_close($conn);
-
-}*/
 
 function searchContacts() {
 	$conn = getConexao();
 
 	$txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
-	//$pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
-
-	//$quantidade = 10; //registros por página
-    //$inicio = ($quantidade * $pagina) - $quantidade; 
-
+	
 	$sql = "SELECT  
 			idContato,
 			nomeContato,
@@ -148,17 +128,16 @@ function searchContacts() {
 			nomeContato LIKE '{$txt_pesquisa}%' or
 			emailContato LIKE '{$txt_pesquisa}%'
 			ORDER BY nomeContato ASC
+			
 		";
 
 	$result = mysqli_query($conn, $sql) or die("Erro ao pesquisar dados do registro. ");
-
-	/*$num = catchLineId(); //numTotal
-	$totalPages = $num/$quantidade;*/
 
 	mysqli_close($conn);
 
 	return $result;
 
 }
+
 
 ?>
