@@ -34,10 +34,6 @@ $dados = buscaEventoPorId($idEvento);
             <input type="text" name="nomeEvento" value="<?= $dados["nomeEvento"] ?>">
         </div>
         <div>
-            <label for="descricaoEvento">Descrição do Evento</label>
-            <input type="text" name="descricaoEvento" value="<?= $dados["descricaoEvento"] ?>">
-        </div>
-        <div>
             <label for="localEvento">Local do Evento</label>
             <input type="text" name="localEvento" value="<?= $dados["localEvento"] ?>">
         </div>
@@ -50,10 +46,6 @@ $dados = buscaEventoPorId($idEvento);
             <input type="time" name="horaEvento" value="<?= $dados["horaEvento"] ?>">
         </div>
         <div>
-            <label for="valorEvento">Valor do Evento </label>
-            <input type="number" name="valorEvento" value="<?= $dados["valorEvento"] ?>">
-        </div>
-        <div>
             <label for="tipoEvento">Tipo de Evento</label>
             <input type="text" name="tipoEvento" value="<?= $dados["tipoEvento"] ?>">
         </div>
@@ -64,10 +56,6 @@ $dados = buscaEventoPorId($idEvento);
         <div>
             <label for="telefoneEvento">Telefone do Evento</label>
             <input type="tel" name="telefoneEvento" value="<?= $dados["telefoneEvento"] ?>">
-        </div>
-        <div>
-            <label for="emailEvento">Email do Evento</label>
-            <input type="text" name="emailEvento" value="<?= $dados["emailEvento"] ?>">
         </div>
         <div>
             <input type="submit" value="Atualizar" name="btnAtualizar">
