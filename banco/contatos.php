@@ -108,6 +108,10 @@ function searchContacts() {
 	$conn = getConexao();
 
 	$txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
+	$pagina = (isset($_GET['pagina']))?(int)$_GET['pagina']:1;
+
+	$quantidade = 10; //registros por página
+    $inicio = ($quantidade * $pagina) - $quantidade; 
 
 	$sql = "SELECT  
 			idContato,
@@ -126,6 +130,7 @@ function searchContacts() {
 			nomeContato LIKE '{$txt_pesquisa}%' or
 			emailContato LIKE '{$txt_pesquisa}%'
 			ORDER BY nomeContato ASC
+			LIMIT $inicio , $quantidade
 		";
 
 	$result = mysqli_query($conn, $sql) or die("Erro ao pesquisar dados do registro. ");

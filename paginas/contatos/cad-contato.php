@@ -29,8 +29,12 @@
         </div>
         <div>
             <label for="sexoContato">Sexo</label>
-            <input required type="text" name="sexoContato">
+            <select name="sexoContato" id="sexoContato">
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
         </div>
+        
         <div>
             <label for="dataNascContato">Data de Nascimento</label>
             <input type="date" name="dataNascContato">
