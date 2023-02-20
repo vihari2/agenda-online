@@ -77,6 +77,9 @@ include("banco/conexao.php");
             case 'login-usuario':
                 include 'paginas/usuarios/login-usuario.php';
                 break;
+            case 'logout':
+                include 'paginas/usuarios/logout.php';
+                break;
             default:
                 include 'paginas/usuarios/usuarios.php';
                 break;

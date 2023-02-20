@@ -17,12 +17,27 @@
     <title>Editar Contato</title>
     <header class="header">
         <h3>Editar Contato</h3>
-        <h1 class="logo"><a href="#">Agenda online</a></h1>
+        <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
         <ul class="main-nav">
             <li><a href="index.php?menuop=home">Home</a></li>
             <li><a href="index.php?menuop=eventos">Eventos</a></li>
             <li><a href="index.php?menuop=contatos">Contatos</a></li>
-            <li><a href="index.php?menuop=usuarios">Login</a></li>
+            
+            <?php
+                    session_start(); // iniciar a sessão
+
+                    if ($_SESSION['logado'] == true) {
+                        // código HTML a ser exibido se o usuário estiver logado
+                    ?>
+                        <li><a href="index.php?menuop=logout">Logout</a></li>
+                    <?php
+                    } else { $_SESSION['logado'] == false;
+                        // código HTML a ser exibido se o usuário não estiver logado
+                    ?>
+                        <li><a href="index.php?menuop=usuarios">Login</a></li>
+                    <?php
+                    }
+                    ?>
         </ul>
     </header>
     

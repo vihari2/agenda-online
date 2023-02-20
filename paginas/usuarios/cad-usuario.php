@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
     <link rel="stylesheet" href="css/usuarios.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <a href="index.php?menuop=usuarios.php">Voltar</a>

@@ -47,5 +47,22 @@ function adicionaUsuario() {
 
 }
 
+function checkLogin() {
+    $conn = getConexao();
+
+    $emailUser= mysqli_real_escape_string($conn, $_POST['emailUser']);
+    $senhaUser = mysqli_real_escape_string($conn, $_POST['senhaUser']);
+
+    $sql = "SELECT * FROM usuario WHERE emailUser = '$emailUser' AND senhaUser = '$senhaUser'";
+
+    $result = mysqli_query($conn, $sql) or die("Erro ao checar dados do registro. " . mysqli_error($conn));
+
+    mysqli_close($conn);
+
+    return $result;          
+}
+
+
 
 ?>
+

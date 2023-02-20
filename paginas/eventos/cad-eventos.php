@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Eventos</title>
     <link rel="stylesheet" href="css/eventos.css">
+    <header class="header">
+        <h1>Contatos</h1>
+            <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
+            <ul class="main-nav">
+                <li><a href="index.php?menuop=home">Home</a></li>
+                <li><a href="index.php?menuop=eventos">Eventos</a></li>
+                <li><a href="index.php?menuop=contatos">Contatos</a></li>
+                <?php
+                    session_start(); // iniciar a sessão
+
+                    if ($_SESSION['logado'] == true) {
+                        // código HTML a ser exibido se o usuário estiver logado
+                    ?>
+                        <li><a href="index.php?menuop=logout">Logout</a></li>
+                    <?php
+                    } else { $_SESSION['logado'] == false;
+                        // código HTML a ser exibido se o usuário não estiver logado
+                    ?>
+                        <li><a href="index.php?menuop=usuarios">Login</a></li>
+                    <?php
+                    }
+                    ?>
+            </ul>
+    </header> 
 </head>
 <body>
 <header>
