@@ -83,8 +83,7 @@ function criaTabelas() {
 		telefoneUser VARCHAR(60) NOT NULL,
 		sexoUser CHAR(1) NOT NULL,
 		dataNascUser DATE NOT NULL,
-		senhaUser VARCHAR(200) NOT NULL,
-		connfirmarSenha VARCHAR(200) NOT NULL
+		senhaUser VARCHAR(200) NOT NULL
 	)";
 
 	if (mysqli_multi_query($conn, $sql)) {

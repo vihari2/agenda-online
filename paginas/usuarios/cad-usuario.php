@@ -41,7 +41,10 @@
                     <div class="input-group-users">
                         <span class="input-group-text" id="basic-addon1">Sexo</span>
                     </div>
-                        <input type="text" name="sexoUser" class="form-control" aria-label="Sexo" aria-describedby="basic-addon1">
+                        <select name="sexoUser" id="sexoUser" class="form-control" aria-label="Sexo" aria-describedby="basic-addon1">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                        </select>
                 </div>   
                        
                 <div class="input-group-prepend">
@@ -73,3 +76,7 @@
 </div>
 </body>
 </html>
+
+
+        
+

@@ -20,6 +20,7 @@ function adicionaUsuario() {
     $sexoUser = mysqli_real_escape_string($conn, $_POST['sexoUser']);
     $dataNascUser = mysqli_real_escape_string($conn, $_POST['dataNascUser']);
     $senhaUser = mysqli_real_escape_string($conn, $_POST['senhaUser']);
+    $confirmarSenhaUser = mysqli_real_escape_string($conn, $_POST['confirmarSenhaUser']);
 
     $sql = "
 		INSERT INTO contatos (
@@ -39,8 +40,6 @@ function adicionaUsuario() {
 	    )";
 
     mysqli_query($conn, $sql) or die ("Erro ao executar a consulta! " . print_r(mysqli_error($conn)));
-
-	print_r(mysqli_error($conn));
 
     mysqli_close($conn);
 
