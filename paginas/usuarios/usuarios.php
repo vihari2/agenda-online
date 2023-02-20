@@ -32,7 +32,7 @@
 
         </div>
             <div class="boxCad">
-                <p><strong>Ainda não é inscrito? <a href="index.php?menuop=cad-usuario">Cadastre-se!</a></strong></p>
+                <p class><strong>Ainda não é inscrito? <a href="index.php?menuop=cad-usuario">Cadastre-se!</a></strong></p>
             </div>
         </div>
     </form>
