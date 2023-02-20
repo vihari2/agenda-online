@@ -16,21 +16,8 @@
             <li><a href="index.php?menuop=home">Home</a></li>
             <li><a href="index.php?menuop=eventos">Eventos</a></li>
             <li><a href="index.php?menuop=contatos">Contatos</a></li>
-            <?php
-                    session_start(); // iniciar a sessão
-
-                    if ($_SESSION['logado'] == true) {
-                        // código HTML a ser exibido se o usuário estiver logado
-                    ?>
-                        <li><a href="index.php?menuop=logout">Logout</a></li>
-                    <?php
-                    } else { $_SESSION['logado'] == false;
-                        // código HTML a ser exibido se o usuário não estiver logado
-                    ?>
-                        <li><a href="index.php?menuop=usuarios">Login</a></li>
-                    <?php
-                    }
-                    ?>
+            <li><a href="index.php?menuop=usuarios">Login</a></li>
+                    
         </ul>
     </header> 
 <a href="index.php?menuop=usuarios.php">Voltar</a>
