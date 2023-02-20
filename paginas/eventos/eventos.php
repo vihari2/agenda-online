@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="css/eventos.css">
 </head>
 <body>
-<header>
-<h1>Eventos</h1>
-</header> 
-<a href="index.php?menuop=home">Voltar</a>
+    
+<header class="header">
+    <h1>Eventos</h1>
+        <h1 class="logo"><a href="#">Agenda online</a></h1>
+        <ul class="main-nav">
+            <li><a href="index.php?menuop=home">Home</a></li>
+            <li><a href="index.php?menuop=eventos">Eventos</a></li>
+            <li><a href="index.php?menuop=contatos">Contatos</a></li>
+            <li><a href="index.php?menuop=usuarios">Login</a></li>
+        </ul>
+    </header> 
+<a href="index.php?menuop=usuarios.php">Voltar</a>
 <div>
     <a class="novoev" href="index.php?menuop=cad-eventos">Novo Evento</a>
 </div>

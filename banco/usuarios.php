@@ -23,7 +23,7 @@ function adicionaUsuario() {
     $confirmarSenhaUser = mysqli_real_escape_string($conn, $_POST['confirmarSenhaUser']);
 
     $sql = "
-		INSERT INTO contatos (
+		INSERT INTO usuario (
 		    nomeUser, 
 		    emailUser, 
 		    telefoneUser, 

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/usuarios.css">
 </head>
 <body>
-    <a href="index.php?menuop=home">Voltar</a>
+    <a href="index.php?menuop=usuarios.php">Voltar</a>
 
 <div>
     <form class="formcadasuser" action="index.php?menuop=inserir-usuario" method="post">

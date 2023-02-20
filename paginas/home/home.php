@@ -6,7 +6,19 @@ include_once("banco/conexao.php");
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
+<<<<<<< HEAD
     <link rel='stylesheet' href='css/home.css' />
+=======
+    <header class="header">
+        <h1 class="logo"><a href="#">Agenda online</a></h1>
+        <ul class="main-nav">
+            <li><a href="index.php?menuop=home">Home</a></li>
+            <li><a href="index.php?menuop=eventos">Eventos</a></li>
+            <li><a href="index.php?menuop=contatos">Contatos</a></li>
+            <li><a href="index.php?menuop=usuarios">Login</a></li>
+        </ul>
+    </header>
+>>>>>>> 81e0a46ec9229042771b7087fc7911d4beae7dc3
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
     <script src='js/fullCalendar/dist/index.global.js'></script>
     <script>

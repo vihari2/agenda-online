@@ -13,10 +13,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Editar Contato</title>
-    <h3>Editar Contato:</h3>
+    <header class="header">
+        <h3>Editar Contato</h3>
+        <h1 class="logo"><a href="#">Agenda online</a></h1>
+        <ul class="main-nav">
+            <li><a href="index.php?menuop=home">Home</a></li>
+            <li><a href="index.php?menuop=eventos">Eventos</a></li>
+            <li><a href="index.php?menuop=contatos">Contatos</a></li>
+            <li><a href="index.php?menuop=usuarios">Login</a></li>
+        </ul>
+    </header>
+    
 </head>
 <body>
+    <a href="index.php?menuop=home">Voltar</a>
 
 <div>
 

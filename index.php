@@ -17,21 +17,12 @@ include("banco/conexao.php");
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="logo"><a href="#">Agenda online</a></h1>
-        <ul class="main-nav">
-            <li><a href="index.php?menuop=home">Home</a></li>
-            <li><a href="index.php?menuop=eventos">Eventos</a></li>
-            <li><a href="index.php?menuop=contatos">Contatos</a></li>
-            <li><a href="index.php?menuop=usuarios">Login</a></li>
-        </ul>
-    </header>
     <main>
     <?php 
         if (isset($_GET['menuop'])) {
          $menuop = $_GET['menuop'];
         } else {
-            $menuop = 'home';
+            $menuop = 'usuarios';
         }
 
         switch($menuop) {
@@ -87,7 +78,7 @@ include("banco/conexao.php");
                 include 'paginas/usuarios/login-usuario.php';
                 break;
             default:
-                include 'paginas/home/home.php';
+                include 'paginas/usuarios/usuarios.php';
                 break;
         }
     ?> 

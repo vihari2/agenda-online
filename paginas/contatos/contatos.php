@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="css/contatos.css">
 </head>
 <body>
-<header>
-<h1>Contatos</h1>
-</header> 
+<head>
+    <header class="header">
+        <h1>Contatos</h1>
+            <h1 class="logo"><a href="#">Agenda online</a></h1>
+            <ul class="main-nav">
+                <li><a href="index.php?menuop=home">Home</a></li>
+                <li><a href="index.php?menuop=eventos">Eventos</a></li>
+                <li><a href="index.php?menuop=contatos">Contatos</a></li>
+                <li><a href="index.php?menuop=usuarios">Login</a></li>
+            </ul>
+    </header> 
+</head>
 <a href="index.php?menuop=home">Voltar</a>
 <div>
     <a class="novoc" href="index.php?menuop=cad-contato">Novo Contato</a>
