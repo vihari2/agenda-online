@@ -58,22 +58,31 @@ include_once("banco/conexao.php");
               arg.event.remove()
             }
           },
-          events: [
-          {
-          nomeEvento: 'título do evento',
-          localEvento: 'local do evento',
-          dataEvento: 'data do evento',
-          horaEvento: 'hora do evento',
-          tipoEvento: 'tipo do evento',
-          organizadorEvento: 'organizador do evento',
-          telefoneEvento: 'telefone do evento',
-          },
-          ],
           initialView: 'dayGridMonth',
           locale: 'pt-br',
           eventSources: [
-            <?php include 'eventos_json.php'; ?>
-            <?php include 'contatos_json.php'; ?>
+            {
+            url: 'eventos_json.php',
+            method: 'GET',
+            extraParams: {
+              custom_param: 'something'
+            },
+            failure: function() {
+              alert('Erro ao carregar eventos!');
+            },
+            color: 'black',  
+            },
+            {
+            url: 'contatos_json.php',
+            method: 'GET',
+            extraParams: {
+              custom_param: 'something'
+            },
+            failure: function() {
+              alert('Erro ao carregar contatos!');
+            },
+            color: 'blue',
+          }
           ]
         });
         calendar.render();
