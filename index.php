@@ -23,6 +23,7 @@ include("banco/conexao.php");
             <li><a href="index.php?menuop=home">Home</a></li>
             <li><a href="index.php?menuop=eventos">Eventos</a></li>
             <li><a href="index.php?menuop=contatos">Contatos</a></li>
+            <li><a href="index.php?menuop=usuarios">Login</a></li>
         </ul>
     </header>
     <main>
@@ -42,6 +43,9 @@ include("banco/conexao.php");
                 break;
             case 'contatos':
                 include 'paginas/contatos/contatos.php';
+                break;
+            case 'usuarios':
+                include 'paginas/usuarios/usuarios.php';
                 break;
             case 'cad-contato':
                 include 'paginas/contatos/cad-contato.php';
@@ -73,17 +77,21 @@ include("banco/conexao.php");
             case 'excluir-evento':
                 include 'paginas/eventos/excluir-evento.php';
                 break;
+            case 'cad-usuario':
+                include 'paginas/usuarios/cad-usuario.php';
+                break;
+            case 'inserir-usuario':
+                include 'paginas/usuarios/inserir-usuario.php';
+                break;
+            case 'login-usuario':
+                include 'paginas/usuarios/login-usuario.php';
+                break;
             default:
                 include 'paginas/home/home.php';
                 break;
         }
     ?> 
 </main>
-    <footer class="container-fluid fixed-botton">
-        <div class="text-center">
-            Agenda Online
-        </div>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </body>

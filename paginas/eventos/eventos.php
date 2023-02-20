@@ -11,6 +11,7 @@
 <header>
 <h1>Eventos</h1>
 </header> 
+<a href="index.php?menuop=home">Voltar</a>
 <div>
     <a class="novoev" href="index.php?menuop=cad-eventos">Novo Evento</a>
 </div>

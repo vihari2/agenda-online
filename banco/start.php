@@ -74,6 +74,28 @@ function criaTabelas() {
 
 	mysqli_close($conn);
 
+	$conn = getConexao();
+
+	$sql = "CREATE TABLE IF NOT EXISTS usuario(
+		idUser INT PRIMARY KEY AUTO_INCREMENT,
+		nomeUser VARCHAR(200) NOT NULL,
+		emailUser VARCHAR(100) NOT NULL,
+		telefoneUser VARCHAR(60) NOT NULL,
+		sexoUser CHAR(1) NOT NULL,
+		dataNascUser DATE NOT NULL,
+		senhaUser VARCHAR(200) NOT NULL,
+		connfirmarSenha VARCHAR(200) NOT NULL
+	)";
+
+	if (mysqli_multi_query($conn, $sql)) {
+		echo "Table usuário created successfully";
+	} else {
+		echo "Error creating table: " . mysqli_error($conn);
+	}
+
+mysqli_close($conn);
+	
+
 }
 
 function populaTabelas() {
@@ -96,6 +118,22 @@ function populaTabelas() {
 	$conn = getConexao();
 	$sql = "INSERT INTO eventos (nomeEvento, descricaoEvento, localEvento, dataEvento, horaEvento, valorEvento, tipoEvento, organizadorEvento, telefoneEvento, emailEvento)
 	VALUES ('Festa de Aniversário', 'Festa de aniversário de 15 anos', 'Rua dos Bobos, 0', '2022-07-21', '20:00:00', '100,00', 'Festa', 'Maria', '41991594567', 'festa15@gmail.com')";
+
+	if (mysqli_multi_query($conn, $sql)) {
+		echo "New records created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	}
+
+	mysqli_close($conn);
+
+	$conn = getConexao();
+
+	$sql = "INSERT INTO usuarios (nomeUser, emailUser)
+		VALUES ('Aracy Almeida', 'aracy@gmail.com');";
+	$sql .= "INSERT INTO contatos (telefoneUser, sexoUser, dataNascUser, senhaUser, confirmarSenha)
+		VALUES ('41998765443', 'F', '18/03/1960', '123', '123');";
+
 
 	if (mysqli_multi_query($conn, $sql)) {
 		echo "New records created successfully";

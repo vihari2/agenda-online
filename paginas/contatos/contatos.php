@@ -11,17 +11,18 @@
 <header>
 <h1>Contatos</h1>
 </header> 
+<a href="index.php?menuop=home">Voltar</a>
 <div>
     <a class="novoc" href="index.php?menuop=cad-contato">Novo Contato</a>
 </div>
-<div>
+<div id="pesquisar">
     <form action="index.php?menuop=contatos" method="post">
         <input type="text" name="txt_pesquisa" placeholder="O que está procurando?">
         <input type="submit" value="Pesquisar">
     </form>
     <br>
 </div>
-<table class='table-contatos table-striped table-bordered table-condensed table-hover' >
+<table class='table-contatos table-striped table-bordered table-hover' >
     <thead>
         <tr class="table-primary">
             <th>ID</th>
