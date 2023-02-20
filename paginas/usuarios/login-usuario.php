@@ -11,3 +11,20 @@
     
 </body>
 </html>
+
+<?php
+    if(isset($_POST['submit']) && !empty($_POST['emailUser']) && !empty($_POST['senhaUser']))
+    {
+        include_once("banco/config.php");
+        listaUsuarios();
+        $email = $_POST['emailUser'];
+        $senha = $_POST['senhaUser'];
+        print_r('Email: ' . $email);
+        print_r('Senha: ' . $senha);
+
+    }
+    else
+    {
+        header('Location: paginas/usuarios/usuarios.php');
+    }
+?>

@@ -7,8 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de contatos</title>
     <link rel="stylesheet" href="css/contatos.css">
+    <header class="header">
+        <h1 class="logo"><a href="#">Agenda online</a></h1>
+        <ul class="main-nav">
+            <li><a href="index.php?menuop=home">Home</a></li>
+            <li><a href="index.php?menuop=eventos">Eventos</a></li>
+            <li><a href="index.php?menuop=contatos">Contatos</a></li>
+            <li><a href="index.php?menuop=usuarios">Login</a></li>
+        </ul>
+    </header>
 </head>
 <body>
+    <a href="index.php?menuop=home">Voltar</a>
 <header>
     <h3 class="cadastro">Cadastro de Contato</h3>
 </header>
