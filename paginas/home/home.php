@@ -16,7 +16,11 @@ include_once("banco/conexao.php");
             </ul>
     </header> 
     <meta charset='utf-8' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.print.min.css' rel='stylesheet' media='print' />
     <link rel='stylesheet' href='css/home.css' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
     <script src='js/fullCalendar/dist/index.global.js'></script>
     <script>
@@ -62,27 +66,15 @@ include_once("banco/conexao.php");
           locale: 'pt-br',
           eventSources: [
             {
-            url: 'eventos_json.php',
-            method: 'GET',
-            extraParams: {
-              custom_param: 'something'
-            },
-            failure: function() {
-              alert('Erro ao carregar eventos!');
-            },
-            color: 'black',  
+                url: 'event.php',
+                textColor: 'white',
+                color: 'blue'
             },
             {
-            url: 'contatos_json.php',
-            method: 'GET',
-            extraParams: {
-              custom_param: 'something'
-            },
-            failure: function() {
-              alert('Erro ao carregar contatos!');
-            },
-            color: 'blue',
-          }
+                url: 'cont.php',
+                textColor: 'white',
+                color: 'green'
+            }
           ]
         });
         calendar.render();
