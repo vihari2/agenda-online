@@ -1,5 +1,5 @@
 <?php
-    include("checarCampos.php");
+    require("checarCampos.php");
 ?>
 <header>
 <!DOCTYPE html>
@@ -15,10 +15,10 @@
 </head>
 <body>
     <h1>AGENDA ONLINE</h1>
-    <a id="aCad" href="index.php?menuop=usuarios.php">Voltar</a>
+    <a id="aCad" href="index.php?menuop=usuarios">Voltar</a>
 
 <div>
-    <form class="multipart/formcadasuser" action="index.php?menuop=validate-senha" method="post">
+    <form class="multipart/formcadasuser" action="index.php?menuop=inserir-usuario" method="post">
             <br>
             <div class="box">
              <legend><b>Cadastro</b></legend>
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div>
-                <input class="btnEnviar" type="submit" value="Enviar" name="btnEnviar">
+                <input class="btnEnviar btn-dark" type="submit" value="Enviar" name="btnEnviar">
             </div>
     </form>
 </div>

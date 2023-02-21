@@ -2,9 +2,9 @@ $(function(){
     $("#form-test").on("submit",function(){
       nome_input = $("input[name='nomeUser']");
       email_input = $("input[name = 'emailUser']");
-      data_input = $("input[name='dataUser']");
+      data_input = $("input[name='dataNascUser']");
       senha_input = $("input[name='senhaUser']");
-      confirmacao_input = $("input[name='confirmacaoSenhaUser']");
+      confirmacao_input = $("input[name='confirmarSenhaUser']");
   
       if(nome_input.val() == "" || nome_input.val() == null)
       {

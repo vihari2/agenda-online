@@ -1,6 +1,10 @@
 <?php
     include("banco/usuarios.php");
 
+    if($senha = $_POST['senhaUser'] !== $_POST['confirmarSenhaUser']) {
+        header("Location: index.php?menuop=erro-usuario");
+    }
+
     adicionaUsuario();
 
 ?>

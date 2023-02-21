@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ERRO</h1>
-    
+    <p class="alert-danger">Senhas são diferentes!</p>
+    <a href="index.php?menuop=cad-usuario">Voltar</a>
 </body>
 </html>
+
+
