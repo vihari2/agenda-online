@@ -1,3 +1,7 @@
+<?php
+print_r($_SESSION);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,7 @@
 </head>
 <body>
     <br>
-    <form action="#" method="post">
+    <form action="index.php?menuop=login" method="post">
         <div class="box">
             <h1>Login</h1>
             <div class="input-group mb-3">
@@ -38,27 +42,4 @@
     </form>
 </body>
 </html>
-
-<?php
-    include("banco/usuarios.php");
-
-    if(isset($_POST['emailUser']) || isset($_POST['senhaUser'])){
-       $result = checkLogin();
-       $quantidade = mysqli_num_rows($result);
-
-       if($quantidade == 1) {
-
-            if(!isset($_SESSION)) {
-                session_start();
-            }
-
-            $_SESSION['logado'] = true;
-
-            header("Location: index.php?menuop=home");
-
-        }else {
-            echo '<p class="alert-danger">Usuário ou senha errados!</p>';
-        }  
-    }
-?>
     

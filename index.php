@@ -1,6 +1,6 @@
 <?php
 include("banco/conexao.php");
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -74,8 +74,8 @@ include("banco/conexao.php");
             case 'inserir-usuario':
                 include 'paginas/usuarios/inserir-usuario.php';
                 break;
-            case 'login-usuario':
-                include 'paginas/usuarios/login-usuario.php';
+            case 'login':
+                include 'paginas/usuarios/login.php';
                 break;
             case 'logout':
                 include 'paginas/usuarios/logout.php';

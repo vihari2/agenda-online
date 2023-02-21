@@ -14,6 +14,7 @@
 
 <?php
     include("paginas/usuarios/functions-usuario.php");
-    $_SESSION['logado'] == false;
+    session_start();
+    $_SESSION['logado'] = false;
     checarSession(); 
 ?>

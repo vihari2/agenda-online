@@ -16,9 +16,7 @@
                 <li><a href="index.php?menuop=home">Home</a></li>
                 <li><a href="index.php?menuop=eventos">Eventos</a></li>
                 <li><a href="index.php?menuop=contatos">Contatos</a></li>
-                <li><a href="index.php?menuop=usuarios">Login</a></li>
-                    
-                
+                <li><a href="index.php?menuop=logout">Logout</a></li>      
             </ul>
     </header> 
 </head>
@@ -47,6 +45,8 @@
         </tr>
    </thead> 
 <tbody>
+
+
     <?php 
   
     include ("banco/contatos.php");
