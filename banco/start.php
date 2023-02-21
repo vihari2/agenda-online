@@ -41,7 +41,7 @@ function criaTabelas() {
 		tagFavoritoContato TINYINT(1)
 	)";
 
-	$sql = "CREATE TABLE IF NOT EXISTS eventos(
+	$sql .= "CREATE TABLE IF NOT EXISTS eventos(
     idEvento INT PRIMARY KEY AUTO_INCREMENT,
     nomeEvento VARCHAR(200) NOT NULL,
     descricaoEvento VARCHAR(100) NOT NULL,
@@ -53,10 +53,10 @@ function criaTabelas() {
     organizadorEvento VARCHAR(200) NOT NULL,
     telefoneEvento VARCHAR(60) NOT NULL,
     emailEvento VARCHAR(100) NOT NULL
-	)";
+	);";
 
 
-	$sql = "CREATE TABLE IF NOT EXISTS usuario(
+	$sql .= "CREATE TABLE IF NOT EXISTS usuario(
 		idUser INT PRIMARY KEY AUTO_INCREMENT,
 		nomeUser VARCHAR(200) NOT NULL,
 		emailUser VARCHAR(100) NOT NULL,
@@ -64,7 +64,7 @@ function criaTabelas() {
 		sexoUser CHAR(1) NOT NULL,
 		dataNascUser DATE NOT NULL,
 		senhaUser VARCHAR(200) NOT NULL
-	)";
+	);";
 
 	if (mysqli_multi_query($conn, $sql)) {
 		echo "Table usuário created successfully";
