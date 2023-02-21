@@ -80,6 +80,12 @@ session_start();
             case 'logout':
                 include 'paginas/usuarios/logout.php';
                 break;
+            case 'validate-senha':
+                include 'paginas/usuarios/validate-senha.php';
+                break;
+            case 'erro-usuario':
+                include 'paginas/usuarios/erro-usuario.php';
+                break;
             default:
                 include 'paginas/usuarios/usuarios.php';
                 break;

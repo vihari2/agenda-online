@@ -56,3 +56,18 @@ legend {
   width: fit-content;
   font-size: 20px;
 }
+
+h1 {
+  background-color: white;
+  font-family: 'none';
+  text-align: center;
+}
+
+#aCad {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: larger;
+  color: black;
+  font-family: none;
+}

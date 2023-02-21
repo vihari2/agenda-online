@@ -28,13 +28,14 @@
 </div>
 
 <div id="pesquisar">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light" >
     <form action="index.php?menuop=contatos" method="post" class="form-inline">
         <input type="text" name="txt_pesquisa" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     </nav>
 </div>
+
 
 <table class='table-contatos table-striped table-bordered table-hover'>
     <thead>

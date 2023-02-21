@@ -25,5 +25,21 @@
               echo '<p class="alert-danger">Usuário ou senha errados!</p>';
             }  
         }
-      }      
-?>
+      } 
+
+      function validateSenha() {
+          $senha = $_POST['senhaUser'];
+          $conf = $_POST['confirmarSenhaUser'];
+
+          if($senha == $conf) {
+            $erro = false;
+          }
+          else {
+            $erro = true;
+          }
+
+          return $erro;
+
+      }
+      
+      ?>

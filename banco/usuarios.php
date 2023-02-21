@@ -14,15 +14,13 @@ function listaUsuarios() {
 function adicionaUsuario() {
     $conn = getConexao();
 
-    $senhaMD5 = md5($_POST['senhaUser']);
-
     $nomeUser = mysqli_real_escape_string($conn, $_POST['nomeUser']);
     $emailUser = mysqli_real_escape_string($conn, $_POST['emailUser']);
     $telefoneUser = mysqli_real_escape_string($conn, $_POST['telefoneUser']);
     $sexoUser = mysqli_real_escape_string($conn, $_POST['sexoUser']);
     $dataNascUser = mysqli_real_escape_string($conn, $_POST['dataNascUser']);
     $senhaUser = mysqli_real_escape_string($conn, $_POST['senhaUser']);
-    $confirmarSenhaUser = mysqli_real_escape_string($conn, $senhaMD5);
+    $confirmarSenhaUser = mysqli_real_escape_string($conn, $_POST['confirmarSenhaUser']);
 
     $sql = "
 		INSERT INTO usuario (
