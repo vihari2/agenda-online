@@ -108,6 +108,34 @@ function excluiEvento() {
     }
 }
 
+function adicionarContatoAoEvento ($nomeEvento, $descricaoEvento, $localEvento, $dataEvento, $horaEvento, $valorEvento, $tipoEvento, $idContato) {
+    $conn = getConexao();
+
+    mysqli_autocommit($conn, false);
+
+    $queryEvento = "INSERT INTO eventos (nomeEvento, descricaoEvento, localEvento, dataEvento, horaEvento, valorEvento, tipoEvento, idContato)
+                VALUES ('$nomeEvento', '$descricaoEvento', '$localEvento', '$dataEvento', '$horaEvento', '$valorEvento', '$tipoEvento', $idContato)";
+    $resultEvento = mysqli_query($conn, $queryEvento);
+
+    $idEvento = mysqli_insert_id($conn);
+
+    $queryContato = "SELECT nomeContato, emailContato, telefoneContato FROM contatos WHERE idContato = $idContato";
+    $resultEventoContato = mysqli_query($conn, $queryContato);
+    $contato = mysqli_fetch_assoc($resultEventoContato);
+    $nomeContato = $contato['nomeContato'];
+    $emailContato = $contato['emailContato'];
+    $telefoneContato = $contato['telefoneContato'];
+    $queryContato = "INSERT INTO eventos_contatos (idEvento, idContato, nomeContato, emailContato, telefoneContato)
+                     VALUES ($idEvento, $idContato, '$nomeContato', '$emailContato', '$telefoneContato')";
+    $resultEventoContato = mysqli_query($conn, $queryContato);
+
+    if ($resultEvento && $resultEventoContato) {
+        mysqli_commit($conn);
+    } else {
+        mysqli_rollback($conn);
+    }
+    mysqli_close($conn);
+}
 
 
 ?>
