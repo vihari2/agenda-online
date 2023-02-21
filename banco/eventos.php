@@ -137,5 +137,4 @@ function adicionarContatoAoEvento ($nomeEvento, $descricaoEvento, $localEvento, 
     mysqli_close($conn);
 }
 
-
 ?>

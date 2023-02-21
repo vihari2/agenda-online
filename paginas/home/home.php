@@ -1,5 +1,8 @@
 <?php
 include_once("banco/conexao.php");
+include_once("banco/eventos.php");
+include_once("banco/contatos.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -38,14 +41,15 @@ include_once("banco/conexao.php");
             listDay: { buttonText: 'Dia' },
             listWeek: { buttonText: 'Semana' }
           },
-          navLinks: true, // can click day/week names to navigate views
-          businessHours: true, // display business hours
+          navLinks: true, 
+          businessHours: true, 
           editable: true,
           selectable: true,
           selectMirror: true,
           dayMaxEvents: true,
           select: function(arg) {
             var title = prompt('Título do Evento:');
+            var description = prompt('Descrição do Evento:');
             if (title) {
               calendar.addEvent({
                 title: title,
@@ -55,6 +59,13 @@ include_once("banco/conexao.php");
               })
             }
             calendar.unselect()
+          },
+          eventClick: function(info) {
+            document.getElementById('Title').innerHTML = info.event.title;
+            document.getElementById('Description').innerHTML = info.event.extendedProps.description;
+            document.getElementById('Start').innerHTML = info.event.start;
+            document.getElementById('End').innerHTML = info.event.end;
+            document.getElementById('modal').style.display = 'block';
           },
           eventClick: function(arg) {
             if (confirm('Deseja excluir este evento?')) {
