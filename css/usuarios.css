@@ -13,8 +13,8 @@ body {
   transform: translate(-50%, -50%);
   background: linear-gradient(
     to right,
-    rgba(40, 147, 220, 0.7),
-    rgba(39, 87, 109, 0.7)
+    rgb(40, 147, 220),
+    rgb(39, 87, 109)
   );
   padding: 30px;
   border-radius: 15px;
@@ -51,5 +51,8 @@ legend {
   justify-content: center;
   align-items: center;
   background-color: white;
+  border-left: auto;
+  border-right: auto;
+  width: fit-content;
   font-size: 20px;
 }

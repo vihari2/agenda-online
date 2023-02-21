@@ -10,7 +10,6 @@
 <body>
 <head>
     <header class="header">
-        <h1>Contatos</h1>
             <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
             <ul class="main-nav">
                 <li><a href="index.php?menuop=home">Home</a></li>
@@ -20,18 +19,24 @@
             </ul>
     </header> 
 </head>
-<a href="index.php?menuop=home">Voltar</a>
 <div>
-    <a class="novoc" href="index.php?menuop=cad-contato">Novo Contato</a>
+    <h3>Contatos</h3>
+    <a href="index.php?menuop=home">Voltar</a>
+    <div>
+        <a class="novoc" href="index.php?menuop=cad-contato">Novo Contato</a>
+    </div>
 </div>
+
 <div id="pesquisar">
-    <form action="index.php?menuop=contatos" method="post">
-        <input type="text" name="txt_pesquisa" placeholder="O que está procurando?">
-        <input type="submit" value="Pesquisar">
+    <nav class="navbar navbar-light bg-light">
+    <form action="index.php?menuop=contatos" method="post" class="form-inline">
+        <input type="text" name="txt_pesquisa" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-    <br>
+    </nav>
 </div>
-<table class='table-contatos table-striped table-bordered table-hover' >
+
+<table class='table-contatos table-striped table-bordered table-hover'>
     <thead>
         <tr class="table-primary">
             <th>ID</th>
@@ -72,13 +77,6 @@
 </body>
 </html>
 <br>
-
-<?php
-
-    //totalRegistros();
-
-    
-?>
 
 
 

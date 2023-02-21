@@ -1,13 +1,11 @@
 <?php
 include_once("banco/conexao.php");
-print_r($_SESSION);
-
 ?>
+
 <!DOCTYPE html>
 <html lang='en'>
   <head>
   <header class="header">
-        <h1>Contatos</h1>
             <h1 class="logo"><a href="#">Agenda online</a></h1>
             <ul class="main-nav">
                 <li><a href="index.php?menuop=home">Home</a></li>

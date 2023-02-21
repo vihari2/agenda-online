@@ -29,10 +29,12 @@ $dados = buscaEventoPorId($idEvento);
     </header>
 </head>
 <body>
-    <a href="index.php?menuop=home">Voltar</a>
-    <header>
-        <h3 class="cadastro">Editar Eventos</h3>
-    </header>
+    <div>
+        <a href="index.php?menuop=home">Voltar</a>
+        <header>
+            <h3 class="cadastro">Editar Eventos</h3>
+        </header>
+    </div>
 <div>
     <form class="formcadas" action="index.php?menuop=atualizar-evento" method="post">
         <div>

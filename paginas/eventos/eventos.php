@@ -10,23 +10,24 @@
 <body>
     
 <header class="header">
-    <h1>Eventos</h1>
         <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
         <ul class="main-nav">
             <li><a href="index.php?menuop=home">Home</a></li>
             <li><a href="index.php?menuop=eventos">Eventos</a></li>
             <li><a href="index.php?menuop=contatos">Contatos</a></li>
-            <li><a href="index.php?menuop=logout">Logout</a></li>
-                    
+            <li><a href="index.php?menuop=logout">Logout</a></li>             
         </ul>
-    </header> 
-<a href="index.php?menuop=usuarios.php">Voltar</a>
-<div>
-    <a class="novoev" href="index.php?menuop=cad-eventos">Novo Evento</a>
-</div>
-<table class="table-eventos">
+    </header>
+    <div>
+        <a href="index.php?menuop=usuarios.php">Voltar</a>
+        <div>
+            <a class="novoev" href="index.php?menuop=cad-eventos">Novo Evento</a>
+        </div>
+        <h3>Eventos</h3>
+    </div> 
+<table class="table-eventos table-striped table-bordered table-hover">
     <thead>
-        <tr>
+        <tr class="table-primary">
             <th>ID</th>
             <th>Nome do Evento</th>
             <th>Local do Evento</th>
@@ -55,7 +56,7 @@
             <td><?=$dados["tipoEvento"] ?></td>
             <td><?=$dados["organizadorEvento"] ?></td>
             <td><?=$dados["telefoneEvento"] ?></td>
- 
+
             <td><a href="index.php?menuop=editar-evento&idEvento=<?=$dados['idEvento']?>">Editar</a></td>
             <td><a href="index.php?menuop=excluir-evento&idEvento=<?=$dados['idEvento']?>">Excluir</a></td>
         </tr>

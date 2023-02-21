@@ -16,21 +16,21 @@
 
     <title>Editar Contato</title>
     <header class="header">
-        <h3>Editar Contato</h3>
-        <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
-        <ul class="main-nav">
-            <li><a href="index.php?menuop=home">Home</a></li>
-            <li><a href="index.php?menuop=eventos">Eventos</a></li>
-            <li><a href="index.php?menuop=contatos">Contatos</a></li>
-            <li><a href="index.php?menuop=logout">Logout</a></li>
-                    
-        </ul>
-    </header>
+            <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
+            <ul class="main-nav">
+                <li><a href="index.php?menuop=home">Home</a></li>
+                <li><a href="index.php?menuop=eventos">Eventos</a></li>
+                <li><a href="index.php?menuop=contatos">Contatos</a></li>
+                <li><a href="index.php?menuop=logout">Logout</a></li>      
+            </ul>
+    </header> 
     
 </head>
 <body>
-    <a href="index.php?menuop=home">Voltar</a>
-
+    <div>
+        <a href="index.php?menuop=home">Voltar</a>
+        <h3>Editar Contato</h3>
+    </div>
 <div>
 
     <form class="formcadas" action="index.php?menuop=atualizar-contato" method="post">

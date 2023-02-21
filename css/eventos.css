@@ -108,3 +108,8 @@ caption {
     border-bottom: 0;
   }
 }
+
+h3 {
+  justify-content: center;
+  padding-bottom: 10px;
+}
