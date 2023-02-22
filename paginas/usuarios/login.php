@@ -1,6 +1,9 @@
 <?php
     include("functions-usuario.php");
-    fazLogin(); 
+
+    fazLogin();
+
+    
 ?>
 
 <!DOCTYPE html>
