@@ -18,6 +18,9 @@
     <title>Redirecionar</title>
 </head>
 <body>
-    <a href="index.php?menuop=home">Home</a>
+<div class="alert alert-success alert-dismissible">
+  <strong>Usuário cadastrado com sucesso!</strong>
+</div>
+<a href="index.php?menuop=home">Home</a>
 </body>
 </html>
