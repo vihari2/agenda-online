@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:wght@400;800&family=Yeon+Sung&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -7,6 +8,7 @@ body {
   margin: 0;
   min-height: 100vh;
   position: relative;
+  font-family: "Open Sans", sans-serif;
 }
 ul {
   margin: 0;
@@ -15,10 +17,34 @@ ul {
 }
 
 a {
+  font-family: "Open Sans", sans-serif;
   color: #34495e;
   text-decoration: none;
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 700;
 }
 
+.fc-toolbar.fc-header-toolbar {
+  margin: 15px;
+}
+.fc .fc-button-primary {
+  background-color: #34495e;
+  border-color: #34495e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+.fc-toolbar-crunk {
+  background-color: #34495e;
+  display: flex;
+}
+.fc-listMonth-button {
+  gap: 10px;
+  margin: 5px;
+}
 .logo {
   margin: 0;
   font-size: 1.45em;
@@ -45,31 +71,41 @@ a {
 }
 
 .header {
-  width: 100%;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  /* border: 1px solid #a2a2a2;
-  background-color: #f4f4f4; */
-  /* -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px; */
-  border-radius: 5px;
-  position: fixed;
-  z-index: 1;
+  background: #34495e;
+  padding: 20px 0;
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #f2f2f2;
+  margin: 25px;
+}
+
+.fc-listMonth-button fc-button fc-button-primary {
+  gap: 10px;
+  margin: 10px;
+}
+.fc .fc-toolbar-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #34495e;
+  font-family: "Open Sans", sans-serif;
 }
 
 @media (min-width: 769px) {
   .header,
   .main-nav {
     display: flex;
+    margin: 15px;
   }
   .header {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     position: static;
+    display: flex;
+    top: 40px;
   }
 }
 
