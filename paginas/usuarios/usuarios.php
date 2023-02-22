@@ -9,7 +9,7 @@
     <title>Usuários</title>
 </head>
 <body>
-    <h1>AGENDA ONLINE</h1>
+    <h1 class="logo">AGENDA ONLINE</h1>
     <br>
     <form action="index.php?menuop=login" method="post">
         <div class="box">
@@ -31,11 +31,10 @@
                 <input type="submit" value="ENTRAR" class="btnEnviar btn-dark">
             </div>
 
-        </div>
             <div class="boxCad">
                 <p class><strong>Ainda não é inscrito? <a href="index.php?menuop=cad-usuario">Cadastre-se!</a></strong></p>
             </div>
-        </div>
+</div>
     </form>
 </body>
 </html>

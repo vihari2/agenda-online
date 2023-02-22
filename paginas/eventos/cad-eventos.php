@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Eventos</title>
     <link rel="stylesheet" href="css/eventos.css">
+    <link rel="stylesheet" href="css/usuarios.css">
     <header class="header">
         <h1>Contatos</h1>
             <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
@@ -21,38 +22,66 @@
 <header>
     <h3 class="cadastro">Cadastro de Eventos</h3>
 </header>
-<div>
+<div class="box">
     <form class="formcadas" action="index.php?menuop=inserir-evento" method="post">
         <div>
-            <label for="nomeEvento">Nome do Evento</label>
-            <input type="text" name="nomeEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Nome do Evento</span>
+                </div>
+                    <input required type="text" name="nomeEvento" class="form-control" aria-label="nomeEventp" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="localEvento">Local do Evento</label>
-            <input type="text" name="localEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Local</span>
+                </div>
+                    <input required type="text" name="localEvento" class="form-control" aria-label="localEvento" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="dataEvento">Data do Evento</label>
-            <input type="date" name="dataEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Data</span>
+                </div>
+                    <input required type="date" name="dataEvento" class="form-control" aria-label="dataEvento" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="horaEvento">Hora do Evento</label>
-            <input type="time" name="horaEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Hora</span>
+                </div>
+                    <input required type="time" name="horaEvento" class="form-control" aria-label="horaEvento" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="tipoEvento">Tipo de Evento</label>
-            <input type="text" name="tipoEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Tipo do Evento</span>
+                </div>
+                    <input required type="text" name="tipoEvento" class="form-control" aria-label="tipoEvento" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="organizadorEvento">Organizador do Evento</label>
-            <input type="text" name="organizadorEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Organizador</span>
+                </div>
+                    <input required type="text" name="organizadorEvento" class="form-control" aria-label="organizadorEvento" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="telefoneEvento">Telefone do Evento</label>
-            <input type="tel" name="telefoneEvento">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Telefone</span>
+                </div>
+                    <input required type="tel" name="telefoneEvento" class="form-control" aria-label="telefoneEvento" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <input type="submit" value="Adicionar" name="btnAdicionar">
+            <input class="btnEnviar" type="submit" value="Adicionar" name="btnAdicionar">
         </div>
     </form>
 </div>

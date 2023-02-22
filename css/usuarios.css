@@ -14,7 +14,7 @@ body {
   background: linear-gradient(
     to right,
     rgb(40, 147, 220),
-    rgb(39, 87, 109)
+    rgb(147, 201, 226)
   );
   padding: 30px;
   border-radius: 15px;
@@ -45,16 +45,13 @@ legend {
 }
 
 .boxCad {
-  position: relative;
   text-decoration: none;
+  font-family: none;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  border-left: auto;
-  border-right: auto;
-  width: fit-content;
+  padding-top: 40px;
   font-size: 20px;
 }
 
@@ -66,4 +63,12 @@ legend {
   font-size: larger;
   color: black;
   font-family: none;
+}
+
+.logo {
+  background-color: white;
+  font-family: none;
+  font-size: xx-large;
+  text-align: center;
+  padding: 15px;
 }

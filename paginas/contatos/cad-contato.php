@@ -1,9 +1,3 @@
-<?php
-    include("paginas/usuarios/functions-usuario.php");
-    checarSession();
-
-?>
-
 <header>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de contatos</title>
     <link rel="stylesheet" href="css/contatos.css">
+    <link rel="stylesheet" href="css/usuarios.css">
     <header class="header">
         <h1 class="logo"><a href="index.php?menuop=home">Agenda online</a></h1>
         <ul class="main-nav">
@@ -29,34 +24,54 @@
     <h3 class="cadastro">Cadastro de Contato</h3>
 </header>
 
-<div>
+<div class="box">
     <form class="formcadas" action="index.php?menuop=inserir-contato" method="post">
         <div>
-            <label for="nomeContato">Nome</label>
-            <input required type="text" name="nomeContato">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Nome</span>
+                </div>
+                    <input required type="text" name="nomeContato" class="form-control" aria-label="NomeContato" aria-describedby="basic-addon1">
+                </div>
+
         </div>
         <div>
-            <label for="emailContato">E-mail</label>
-            <input required type="email" name="emailContato">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Email</span>
+                </div>
+                    <input required type="email" name="emailContato" class="form-control" aria-label="EmailContato" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="telefoneContato">Telefone</label>
-            <input required type="text" name="telefoneContato">
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Telefone</span>
+                </div>
+                    <input required type="text" name="telefoneUser" class="form-control" aria-label="TelefoneUser" aria-describedby="basic-addon1">
+                </div>
         </div>
         <div>
-            <label for="sexoContato">Sexo</label>
-            <select name="sexoContato" id="sexoContato">
-                <option value="M">M</option>
-                <option value="F">F</option>
-            </select>
-        </div>
-        
+            <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Sexo</span>
+                </div>
+               <select name="sexoContato" id="sexoContato">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+                </div>
+        </div> 
         <div>
-            <label for="dataNascContato">Data de Nascimento</label>
-            <input type="date" name="dataNascContato">
+        <div class="input-group mb-3">
+                <div class="input-group-users">
+                    <span class="input-group-text" id="basic-addon1">Data Nascimento</span>
+                </div>
+                    <input required type="date" name="dataNascContato" class="form-control" aria-label="dataNascContato" aria-describedby="basic-addon1">
+                </div>  
         </div>
         <div>
-            <input type="submit" value="Adicionar" name="btnAdicionar">
+            <input type="submit" value="Cadastrar" name="btnAdicionar" class="btnEnviar btn-dark">
         </div>
     </form>
 </div>
